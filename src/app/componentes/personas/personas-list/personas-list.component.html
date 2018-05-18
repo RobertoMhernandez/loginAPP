@@ -1,0 +1,21 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <h6 class="text-center">Listado de persona</h6>
+    <table class="table table-sm-table-hover table-responsive-sm">
+      <tbody>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Edad</th>
+        <th>Direccion</th>
+        <tr *ngFor="let persona of personaList">
+      
+          <td>{{persona.nombre}}</td>
+          <td>{{persona.email}}</td>
+          <td>{{persona.edad}}</td>
+          <td>{{persona.direccion}}</td>
+        </tr>
+        <button mat-icon-button routerLink="/persona" ><mat-icon>person_add</mat-icon>add </button>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>My APP</span>
+
+    <span class="example-spacer"></span>
+    <button mat-button *ngIf="!isLogin" routerLink="/login" >Entrar</button>
+    
+     
+     <a *ngIf="isLogin">{{emailUsuario}}</a><mat-icon *ngIf="isLogin"[matMenuTriggerFor]="menu">account_circle</mat-icon>
+    <mat-icon *ngIf="isLogin">notification_important</mat-icon>
+    <mat-menu #menu="matMenu" yPosition="below">
+        <button mat-menu-item><mat-icon>settings</mat-icon>settings</button>
+   <button mat-button *ngIf="isLogin" (click)="onClickLogout()" routerLink="/login"><mat-icon>exit_to_app
+    </mat-icon>Salir</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
